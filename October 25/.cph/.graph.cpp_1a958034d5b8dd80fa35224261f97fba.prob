@@ -1,0 +1,1 @@
+{"name":"Local: graph","url":"d:\\Code\\Year 2025\\October 25\\graph.cpp","tests":[{"id":1760844487243,"input":"3 2\n1 2\n1 3","output":""},{"id":1760845546372,"input":"3 3\n1 2\n1 3\n2 3","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\Code\\Year 2025\\October 25\\graph.cpp","group":"local","local":true}

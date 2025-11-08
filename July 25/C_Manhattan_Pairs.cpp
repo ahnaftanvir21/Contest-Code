@@ -1,0 +1,83 @@
+#include<bits/stdc++.h>
+using namespace std;
+ 
+#define fastio() ios_base::sync_with_stdio(0);cin.tie(0);cout.tie(0);
+#define fraction() cout.unsetf(ios::floatfield); cout.precision(10); cout.setf(ios::fixed,ios::floatfield);
+#define file() freopen("input.txt","r",stdin);freopen("output.txt","w",stdout);
+ 
+#define endl '\n'
+#define ll long long
+#define int long long
+#define all(a) (a).begin(),(a).end()
+#define rall(a) (a).rbegin(),(a).rend()
+#define sz(x) (int)x.size()
+#define mem(a,b) memset(a, b, sizeof(a) )
+#define sq(a) ((a) * (a))
+ 
+const double PI = acos(-1);
+const double eps = 1e-9;
+const int inf = 2000000000;
+const int MX = 2e5+123;
+const ll infLL = 9000000000000000000;
+const int MOD = 1e9+7;
+ 
+ 
+void testCases (int tt)
+{
+    int n; cin >> n;
+	    
+	    vector <pair<int, int>> a(n), b(n);
+	    for (int i = 0; i < n; i++){
+	        cin >> a[i].first;
+	        cin >> b[i].first;
+	        a[i].second = i;
+	        b[i].second = i;
+	    }
+    //cout<<"helo\n";
+    sort(all(a));
+    sort(all(b));
+    vector<int>c(n),d(n);
+    for(int i = 0;i < n;i++){
+        c[a[i].second] = i;
+        d[b[i].second] = i;
+    }
+    vector<int>t1,t2,t3,t4;
+    for(int i = 0;i < n;i++){
+        if(c[i] < (n/2) && d[i] < (n/2)){
+            t1.push_back(i);
+        }
+        else if(c[i] >= (n/2) && d[i] < (n/2)){
+            t2.push_back(i);
+        }
+        else if(c[i] >= (n / 2) && d[i] >= (n / 2)){
+            t3.push_back(i);
+        }
+        else t4.push_back(i);
+    }
+    vector<pair<int,int>>ans;
+    for(int i = 0;i < (int)t1.size();i++){
+        ans.push_back({t1[i],t3[i]});
+    }
+    for(int i = 0;i < (int)t2.size();i++){
+        ans.push_back({t2[i],t4[i]});
+    }
+    for(int i = 0;i < ans.size();i++){
+        cout<<ans[i].first+1<<" "<<ans[i].second + 1<<endl;
+    }
+}
+ 
+ 
+int32_t main()
+{
+    //fastio();
+    // srand(time(NULL));
+ 
+    int testcases = 1;
+    cin >> testcases;
+    for (int tt = 1; tt <= testcases; tt++)
+    {
+        testCases (tt);
+    }
+ 
+    return 0;
+}

@@ -1,0 +1,1 @@
+{"name":"Local: anagram_soft_lab","url":"d:\\Code\\Year 2025\\October 25\\anagram_soft_lab.cpp","tests":[{"id":1760843287482,"input":"abcd\ndcbc","output":""},{"id":1760843446510,"input":"abcd\ndcba","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\Code\\Year 2025\\October 25\\anagram_soft_lab.cpp","group":"local","local":true}

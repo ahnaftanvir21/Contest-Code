@@ -13,16 +13,7 @@ int Spf() {
       spf[j] = min(spf[j], i);
     }
   }
-//   int q; cin >> q; // queries q <= 1e6
-//   while (q--) {
-//     int n; cin >> n; // find prime factorization of n <= 1e6
-//     vector<int> ans;
-//     while (n > 1) {
-//       ans.push_back(spf[n]);
-//       n /= spf[n];
-//     }
-//     for (auto x: ans) cout << x << ' '; cout << '\n';
-//   }
+
   return 0;
 }
 void test(int tt){
